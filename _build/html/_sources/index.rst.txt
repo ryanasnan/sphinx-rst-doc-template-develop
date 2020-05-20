@@ -12,6 +12,7 @@ Welcome to Sphinx rst Doc Template's documentation!
 
 
    contoh-output-element
+   sphinx-theme
 
 
 
