@@ -19,7 +19,7 @@
 import sphinx_rtd_theme
 
 project = 'Sphinx rst Doc Template'
-copyright = '2020, Ryan'
+copyright = '2020, Author'
 author = 'Ryan'
 
 # The full version, including alpha/beta/rc tags
