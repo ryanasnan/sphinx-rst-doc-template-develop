@@ -14,7 +14,7 @@ RUN apt-get update \
 
 RUN python3 -m pip install -U pip
 RUN python3 -m pip install Sphinx==3.1.1 Pillow
-RUN python3 -m pip install sphinx-rtd-theme
+RUN python3 -m pip install sphinx-rtd-theme==0.5.0
 RUN python3 -m pip install sphinxcontrib-httpdomain
 RUN python3 -m pip install sphinxcontrib-httpexample
 

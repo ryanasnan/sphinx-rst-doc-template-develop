@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+usage() {
+    printf "%s\n" "Usage: $0 [OPTIONS...]"
+    printf "\n%s\n" "OPTIONS:"
+    printf "  %-25s%s\n" "-s, --start" "Start dynamic wallpaper."
+    printf "  %-25s%s\n" "-p, --start" "Stop dynamic wallpaper."
+    printf "  %-25s%s\n" "-u, --start" "Uninstall dynamic wallpaper. Removes all related files."
+    printf "  %-25s%s\n" "-h, help" "Show this help."
+}
+
+if [ $# -gt 0 ]; then
+	if [ "$1" == "help" ] || [ "$1" == "-h" ]; then
+		usage
+	fi
+
+	if [ "$1" == "start" ]; then
+		echo "start"
+	fi
+
+else
+	usage
+fi
+
+
