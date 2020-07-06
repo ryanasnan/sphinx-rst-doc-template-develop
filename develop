@@ -3,20 +3,38 @@
 usage() {
     printf "%s\n" "Usage: $0 [OPTIONS...]"
     printf "\n%s\n" "OPTIONS:"
-    printf "  %-25s%s\n" "-s, --start" "Start dynamic wallpaper."
-    printf "  %-25s%s\n" "-p, --start" "Stop dynamic wallpaper."
-    printf "  %-25s%s\n" "-u, --start" "Uninstall dynamic wallpaper. Removes all related files."
-    printf "  %-25s%s\n" "-h, help" "Show this help."
+    printf "  %-25s%s\n" "make" "Generate HTML. The _build dir will created"
+    printf "  %-25s%s\n" "clean" "Clean HTML. The _build dir will removed"
+    printf "  %-25s%s\n" "open" "Open HTML. The Build File index.html will opened with default browser"
+    printf "  %-25s%s\n" "makeopen" "Generate and Open HTML"
+    printf "  %-25s%s\n" "-h, --help" "Show this help."
 }
 
 if [ $# -gt 0 ]; then
-	if [ "$1" == "help" ] || [ "$1" == "-h" ]; then
+	if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
 		usage
 	fi
 
-	if [ "$1" == "start" ]; then
-		echo "start"
+	if [ "$1" == "make" ]; then
+		docker run --rm -v $(pwd):/sphinxrtd ryanasnan/sphinxrtd:latest make clean html
 	fi
+
+	if [ "$1" == "clean" ]; then
+		docker run --rm -v $(pwd):/sphinxrtd ryanasnan/sphinxrtd:latest make clean
+	fi
+
+	if [ "$1" == "open" ]; then
+		xdg-open ./shortcut-indexhtml-build
+	fi
+
+
+	if [ "$1" == "makeopen" ]; then
+		docker run --rm -v $(pwd):/sphinxrtd ryanasnan/sphinxrtd:latest make clean html
+		xdg-open ./shortcut-indexhtml-build
+	else 
+		usage
+	fi
+
 
 else
 	usage

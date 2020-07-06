@@ -17,6 +17,7 @@ RUN python3 -m pip install Sphinx==3.1.1 Pillow
 RUN python3 -m pip install sphinx-rtd-theme==0.5.0
 RUN python3 -m pip install sphinxcontrib-httpdomain
 RUN python3 -m pip install sphinxcontrib-httpexample
+RUN python3 -m pip install sphinx-tabs
 
 RUN useradd -mk /home/ryan -u 1000 -U ryan
 RUN usermod -aG sudo ryan

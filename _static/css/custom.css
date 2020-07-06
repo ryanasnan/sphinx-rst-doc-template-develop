@@ -47,3 +47,110 @@ h5 {
 h6 {
     border-bottom: 0.4px solid #5d5959;
 }
+
+dl.http.get {
+    border: 5px solid #1abc9c;
+}
+
+dl.http.post {
+    border: 5px solid #6ab0de;    
+}
+
+
+dl.http.patch, dl.http.put {
+    border: 5px solid #f0b37e;    
+}
+
+
+dl.http.delete {
+    border: 5px solid #f29f97;
+}
+
+
+
+dl.http dt {
+    font-size: 90% !important;
+    background: #eee !important;
+    padding: 4px 0 !important;
+    border-top: none !important;
+    display: block !important;
+}
+
+dl.http dt code.sig-name.descname:first-of-type {
+    border: 1px solid !important;
+    border-color: #e0e0e0 !important;
+    padding: 4px 4px 4px 12px !important;    
+}
+
+
+dl.http.get dt code.sig-name.descname:first-of-type {
+    background: #dbfaf4 !important;
+    color: #008a6f !important;
+}
+
+dl.http.post dt code.sig-name.descname:first-of-type {
+    background: #e7f2fa !important;
+    color: #009aff !important;
+}
+
+dl.http.patch dt code.sig-name.descname:first-of-type, dl.http.put dt code.sig-name.descname:first-of-type {
+    background: #ffedcc !important;
+    color: #e67c20 !important;
+}
+
+dl.http.delete dt code.sig-name.descname:first-of-type {
+    background: #fdf3f2 !important;
+    color: #de756b !important;
+}
+
+
+
+dl.http.get dd div.admonition p.admonition-title {
+	background: #1abc9c;
+}
+
+dl.http.post dd div.admonition p.admonition-title {
+    background: #6ab0de;    
+}
+
+dl.http.patch dd div.admonition p.admonition-title, dl.http.put dd div.admonition p.admonition-title {
+    background: #f0b37e;    
+}
+
+dl.http.delete dd div.admonition p.admonition-title {
+    background: #f29f97;
+}
+
+dl.http dd div.admonition {
+	background: #efefef;
+}
+
+
+
+dl.http dt code.sig-name.descname {
+    padding: 6px !important;
+    font-size: 90% !important;
+}
+    
+dl.http dd {
+    margin: 12px 24px !important;
+}
+
+
+div.sphinx-tab table {
+	width: 100%;
+}
+
+
+p {
+    line-height: 24px;
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.rst-content blockquote {
+    margin-left: none;
+    line-height: 24px;
+    margin-bottom: 10px;
+}

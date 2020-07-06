@@ -31,7 +31,7 @@ release = '1.01'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_rtd_theme','sphinxcontrib.httpdomain', 'sphinxcontrib.httpexample']
+extensions = ['sphinx_rtd_theme', 'sphinxcontrib.httpdomain', 'sphinxcontrib.httpexample', 'sphinx_tabs.tabs']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -61,8 +61,6 @@ html_theme_options = {
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
-    'vcs_pageview_mode': '',
-    'style_nav_header_background': 'white',
     # Toc options
     'collapse_navigation': True,
     'sticky_navigation': True,
@@ -76,4 +74,4 @@ html_theme_options = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 def setup(app):
-    app.add_stylesheet('css/custom.css') 
+    app.add_css_file('css/custom.css') 
